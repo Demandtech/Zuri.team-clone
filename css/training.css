@@ -16,7 +16,7 @@ html{
 body{
  background-color: var(--main-bg-color);
  background-color: var(--main-bg-color);
- 
+ position: relative;
 }
 
 *{
@@ -837,6 +837,64 @@ header{
   gap: 20px;
 }
 
+/* Modal */
+.modal-content{
+  padding: 80px;
+  width: 40%;
+  background-color: var(--white-color);
+  border: 1px solid #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: 0 auto;
+  border-radius: 10px;
+  
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+  overflow: auto;
+}
+
+.modal-content-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-content-header .fa-xmark{
+  font-size: 30px;
+  color:#e7332b;
+  cursor: pointer;
+}
+
+.modal-content-header p{
+  font-family:"Graphik";
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+  color: #1b1a20;
+}
+
+.modal-subheader{
+  margin-top: 20px;
+  font-family: "Graphik";
+  color: #585757;
+  line-height: 22px;
+}
+
+.subheader{
+  margin-bottom: 20px;
+}
+
 
 
 @media (max-width: 800px){
@@ -997,8 +1055,26 @@ header{
   }
   .circle{
     bottom: -70px;
-    right:-20px;
+    right:-10px;
   }
+
+  .nav-item-bt{
+   margin-left: 8px;
+  }
+
+  .btn-img{
+    display: none;
+  }
+
+  .btn-img img{
+   display: none;
+  }
+
+  .btn{
+    border-radius: 50px;
+    white-space: nowrap;
+
+   }
 
   .get-started-container h3{
     font-size: 35px;   
@@ -1052,8 +1128,7 @@ header{
    display: none;
   }
 
-
-
-
-
  }
+
+
+ 
